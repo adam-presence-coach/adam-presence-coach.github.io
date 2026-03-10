@@ -14,36 +14,40 @@ body {
     padding: 40px 20px;
 }
 
-/* =========================
-   Navigation Bar
-   ========================= */
+/* Navigation Bar */
 .navbar {
     background: #2c6aa0;
     padding: 12px 20px;
     border-radius: 8px;
-    margin: 20px auto 40px;
+    margin: 20px auto 40px; /* space below header */
+    text-align: center;
 }
+
 .navbar ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    display: inline-flex; /* horizontal layout */
+    gap: 30px;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
 }
+
 .navbar a {
     color: #fff;
     font-weight: 600;
     text-decoration: none;
+    padding: 6px 12px;
     transition: color 0.3s ease, transform 0.2s ease;
 }
+
 .navbar a:hover {
     color: #f0d27a;
     transform: translateY(-2px);
 }
+
+/* Responsive: stack links on small screens */
 @media (max-width: 600px) {
     .navbar ul {
+        display: flex;
         flex-direction: column;
         gap: 12px;
         align-items: center;
