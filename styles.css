@@ -1,7 +1,6 @@
 /* =========================
    Global Styles
    ========================= */
-
 body {
     margin: 0;
     font-family: 'Source Sans 3', Arial, sans-serif;
@@ -9,7 +8,6 @@ body {
     color: #333;
     background: #fafafa;
 }
-
 .container {
     max-width: 760px;
     margin: auto;
@@ -17,9 +15,44 @@ body {
 }
 
 /* =========================
+   Navigation Bar
+   ========================= */
+.navbar {
+    background: #2c6aa0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 20px auto 40px;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+.navbar a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+.navbar a:hover {
+    color: #f0d27a;
+    transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+}
+
+/* =========================
    Header
    ========================= */
-
 header {
     display: flex;
     align-items: center;
@@ -31,31 +64,24 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-
-header .header-text {
-    flex: 1;
-}
-
+header .header-text { flex: 1; }
 header h1 {
     margin: 0;
     font-size: 2.4rem;
     font-weight: 600;
     color: #1a1a1a;
 }
-
 header .tagline {
     margin-top: 6px;
     font-size: 1.2rem;
     color: #666;
 }
-
 header img {
     max-width: 220px;
     height: auto;
     border-radius: 6px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 header img:hover {
     transform: scale(1.03);
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
@@ -64,7 +90,6 @@ header img:hover {
 /* =========================
    Sections
    ========================= */
-
 section {
     margin-top: 70px;
     padding: 30px 20px;
@@ -73,16 +98,11 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 section:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.07);
 }
-
-section + section {
-    margin-top: 40px;
-}
-
+section + section { margin-top: 40px; }
 h2 {
     font-size: 1.6rem;
     margin-bottom: 18px;
@@ -90,46 +110,15 @@ h2 {
     border-bottom: 2px solid #eee;
     padding-bottom: 6px;
 }
-
-/* =========================
-   Paragraphs
-   ========================= */
-
-p {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    color: #444;
-}
-
-/* =========================
-   Lists
-   ========================= */
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: #444;
-}
+p { margin-bottom: 20px; font-size: 1rem; color: #444; }
+ul { padding-left: 20px; }
+li { margin-bottom: 10px; font-size: 1rem; color: #444; }
 
 /* =========================
    Links & Buttons
    ========================= */
-
-a {
-    color: #2c6aa0;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #245882;
-    text-decoration: underline;
-}
-
+a { color: #2c6aa0; text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: #245882; text-decoration: underline; }
 .button {
     display: inline-block;
     margin-top: 12px;
@@ -141,7 +130,6 @@ a:hover {
     text-decoration: none;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .button:hover {
     background: #245882;
     transform: translateY(-2px);
@@ -151,7 +139,6 @@ a:hover {
 /* =========================
    Contact Section
    ========================= */
-
 .contact {
     background: #f3f6f9;
     padding: 25px 20px;
@@ -162,7 +149,6 @@ a:hover {
 /* =========================
    Footer
    ========================= */
-
 footer {
     text-align: center;
     font-size: 0.9rem;
@@ -174,49 +160,18 @@ footer {
 }
 
 /* =========================
-   Responsive Design
+   Responsive
    ========================= */
-
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    header img {
-        max-width: 180px;
-        margin-top: 20px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    .container {
-        padding: 20px 15px;
-    }
-
-    section {
-        padding: 20px 15px;
-    }
+    header { flex-direction: column; align-items: center; text-align: center; padding: 40px 20px; }
+    header img { max-width: 180px; margin-top: 20px; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.4rem; }
+    .container { padding: 20px 15px; }
+    section { padding: 20px 15px; }
 }
-
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    .button {
-        padding: 10px 18px;
-    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.2rem; }
+    .button { padding: 10px 18px; }
 }
